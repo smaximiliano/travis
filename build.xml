@@ -20,6 +20,11 @@
 
     <target name="run">
         <java jar="build/jar/HelloWorld.jar" fork="true"/>
-    </target>
+</target>
 
+<target name="test">
+	<antcall target="compile"></antcall>
+	<antcall target="jar"></antcall>
+	<antcall target="run"></antcall>
+</target>
 </project>
